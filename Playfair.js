@@ -11,6 +11,7 @@ const getIndexOfK = (arr, k) => {
 const playfair = (opt,m, k, alpha) => {
     const letras = alpha.split('');
     m = m.replace(/ /g, "");
+    m = m.toUpperCase();
     let alfabeto = [];
     const letrasClave = k.split('');
     const letrasMensaje = m.split('');
@@ -163,9 +164,9 @@ const playfair = (opt,m, k, alpha) => {
             if(!mensaje[index]) {
                 posicionesP = getIndexOfK(matriz,primeraLetra);
                 posicionesS = getIndexOfK(matriz,segundaLetra);
-                temp = posicionesP[0];
-                posicionesP[0] = posicionesS[0];
-                posicionesS[0] = temp;
+                temp = posicionesP[1];
+                posicionesP[1] = posicionesS[1];
+                posicionesS[1] = temp;
                 mensaje[index] = matriz[posicionesP[0]][posicionesP[1]] + matriz[posicionesS[0]][posicionesS[1]];
             }
         }
@@ -178,10 +179,15 @@ const playfair = (opt,m, k, alpha) => {
 
 const alpha = 'ABCDEFGHIKLMNOPQRSTUVWXYZ';
 const k = 'BEATLES';
-let m = 'WITH A LITTLE HELP FROM MY FRIENDS';
+const m = 'WITH A LITTLE HELP FROM MY FRIENDS';
 
 // console.log(playfair(0,m,k,alpha));
 
 const alpha1 = 'ABCDEFGHIJLMNOPQRSTUVWXYZ';
-let m1 = 'EC TB AZ EN WB JH TX AB BU VC LO JT PM IL';
-console.log(playfair(1,m1,k,alpha1));
+const m1 = 'EC TB AZ EN WB JH TX AB BU VC LO JT PM IL';
+// console.log(playfair(1,m1,k,alpha1));
+
+const alpha2 = 'ABCDEFGHIJLMNOPQRSTUVWXYZ';
+const m2 = "Las sombras llaman a la puerta del castillo hoy";
+const k2 = "MIEDO";
+// console.log(playfair(0,m2,k2,alpha2));
