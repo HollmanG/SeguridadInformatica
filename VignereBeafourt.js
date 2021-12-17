@@ -75,13 +75,13 @@ const alfabeto = nAlpha(alpha);
 // const asd = 'FMTBOWWGSRPLVRODDEZIYHODIVXQDBJKSAAEUBPCSVISHDHBVVWJRSHXANHMVTUEZKPRBYXEDOYKQUWQHYEDZMNKCMNHMVTUSVVDECIVEÑSIFTQELHKSA'
 // console.log(vignere_beafourt('vignere auto des', asd, alfabeto, clave3));
 //Taller B
-const c1 = 'GHVNW CDÑGT ZYCOV AXSPN RQLAM XRLLX XUKIV ZDYDT TNEWG IHQSU KJHOG YKPIC MVKER SFUDT TRPÑG SVQAV JTTYO UVIRY BYJIV LMLMT LTTÑR AVQPM JEYCE KVGBC ZJKBO CYÑJP ZQTAM TZSMP RCJCT HVNVP MVCTÑ YÑCRA HEDUE UHJMW ZP';
-const clave1 = 'MURPHY';
+const c1 = 'HRELC PWKAS QRZLXN SWRZKH AHSLZITA ZVNVWO KYLCLÑIW YQEYGJ ÑQHBZX XWYGP IOBCDW RESGAVL NZAMNH YBVJDLWI PKAKEHA AHGONHR PNMXH DSLVÑA ETTAIAJG AQCSAM PTAEWSW KSDPNPT DTHBVSO ZWTSZYT PYIWHHK WKQCRM OBHSPU HFETHMR ÑZPSRPB PBYAWDZPTFLJWLÑYAALCLOHRDJEXSNR';
+const clave1 = 'BELLEZA';
 const c2 = 'FAOOL VDSPI MJXHS ECAVW AOXNX OSVAU USXEM JWAIW OAMJS RUJÑG SVMYW WXIQN XOYGI YNWZA YSMXO IUAMÑ SRUJF PEPYS MHYNH JYMGX OMVWG ITJDH YQOKM WGGAA WJSQV J';
 const clave2 = 'PASION';
 const c3 = 'La Informatica Forense es una ciencia que mediante la aplicacion de una metodologia estructurada de investigacion se encarga de analizar diferentes medios de almacenamiento de datos informaticos con el fin de encontrar informacion que pudiera ser util en un proceso de investigacion o auditoria';
 const clave3 = 'Forense';
-console.log(vignere_beafourt('vignere auto enc', c3, alfabeto, clave3));
+console.log(vignere_beafourt('beafourt', c1, alfabeto, clave1));
 
 const asd = 'POZQRHVWABUHOWARXUUEJHMQNUMIFWUASCIYGLIQHXPODIPXBGLCIEXLGUOIAQWSXBLAKBOHHEGAKTYKTUUFXCEVHSWMÑNXMHGAKEOKOEYEHQCNRQICERPIPMQEEWMXPVHUIWVPEÑTOUHQAWTEOXBDPLEGIHLQIOLASBUHDKÑOGMNTAORQIXHWZWVEEKBRIJMRKUTBIGERCRUUMEIYUCXZLWQMHJZZGQNBSVWOZWHWMÑNXMHGWGUFPIBGIU';
-console.log(vignere_beafourt('vignere auto des', asd, alfabeto, clave3));
+// console.log(vignere_beafourt('vignere auto des', asd, alfabeto, clave3));

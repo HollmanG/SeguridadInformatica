@@ -59,7 +59,6 @@ const hill = (opt, m, k, n, alfabeto) => {
         j = j+2;
     }
 
-    console.log(matriz);
     if(opt == 0) {
         const adj = adjunto(2,k);
         const mod = adj.map(x=>x.map(a => (a +n)%n));
@@ -85,8 +84,6 @@ const alpha1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const alfabeto = nAlpha(alpha);
 const alfabeto1 = nAlpha(alpha1);
 
-const m = 'SUPER BOWL';
-
 const k = [[5, 11], [8, 15]];
 const m1 = 'KPTMWÑUQ';
 console.log(hill(0, m1, k, 27, alfabeto));
@@ -96,3 +93,14 @@ const k1 = [[3, 3], [2, 5]];
 const m2 = 'HIAT';
 console.log(hill(0, m2, k1, 26, alfabeto1));
 
+
+const m = 'short example';
+const k2 = [[7, 8], [11, 11]];
+console.log(hill(1, m, k2, 26, alfabeto1));
+
+const mp = 'UN ATACANTE BUSCA EXTRAER INFORMACION COMO EL SOFTWARE UTILIZADO VERSIONES DEL SISTEMA OPERATIVO LA INFRAESTRUCTURA EN LA RED ROUTERS Y CONTRAFUEGOS';
+const kp = [[16, 2], [8, 0]];
+console.log(hill(1, mp, kp, 27, alfabeto));
+
+const ma = 'LGNAEAZAEYEILQIASDRJSFSKCNOJEAWKWWUMFMYHHMOYJAYFMYDHLSXXJÑCJWKAWNQFFWQTQHFDAUTRJMYEÑÑHSKINIATQGJRPUGIAÑWJAPFUJYGSFDQIPFWRJÑNVFIM';
+console.log(hill(0, ma, kp, 27, alfabeto));

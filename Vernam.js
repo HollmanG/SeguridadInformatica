@@ -69,12 +69,6 @@ function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
 }
 
-const m = 'Alemania';
-const k = '1pQw3F2m';
-
-const m1 = 'st9CHYG';
-const k1 = 'oK6vQB9';
-
 function vernam(m, k) {
 
     const letrasMensaje = m.split('');
@@ -102,10 +96,19 @@ function vernam(m, k) {
 
     }
 
-    return mensaje;
+    return mensaje.join('');
 
 }
 
+const m = 'Alemania';
+const k = '1pQw3F2m';
 
+const m1 = 'st9CHYG';
+const k1 = 'oK6vQB9';
 
-console.log(vernam(m1, k1));
+const mp = 'HollmanEstebanGonzalezSuarez';
+const kp = 'EstaEsUnaClavePersonalParaMi';
+
+const cif = vernam(mp, kp);
+console.log(cif);
+console.log(vernam(cif, kp));

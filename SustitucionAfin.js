@@ -142,8 +142,12 @@ const nAlpha = alfabeto(alpha);
 
 console.log(sustitucionAfin(1, mensaje, 0, 11, 12));
 
-const c4 = 'ZMUMC FHUSW SUTOIMQKACFCUHOICUCTPCTSPCTCUUMBOTTSRCDMURCPCTCUYMWMFPMHOTHOTPMUYOKACFSCTPCCYMYJMOATMISFPOUSMNMTPMFPSHMKACRCYCSPCFACEOFMDCTOFOPMYLCBHUCCUYOKACTATHMNAC'
+const c4 = 'IOAWB UGÑGD BIÑPT DTRJW BPGOS GQGOT DGÑWD PDGAW ÑSWÑP WGOGK  POSGO STQGG OSÑWÑ GOGKZ PDZTD PDSGZ WIOWR TSÑWX GHWMW OQTOW OQTGK  TMFGS PXT'
 
-// console.log(sustitucionAfin(0, c4, 0));
+console.log(sustitucionAfin(0, c4, 0));
 
-console.log(hallarAlfabeto(alpha, 11, 12));
+const a = (-11+27)%27
+
+console.log(a);
+
+console.log(hallarAlfabeto(alpha, a, 23));

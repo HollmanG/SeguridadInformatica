@@ -9,6 +9,7 @@ const getIndexOfK = (arr, k) => {
 }
 
 const playfair = (opt,m, k, alpha) => {
+    k = k.toUpperCase();
     const letras = alpha.split('');
     m = m.replace(/ /g, "");
     m = m.toUpperCase();
@@ -24,6 +25,10 @@ const playfair = (opt,m, k, alpha) => {
         if(!alfabeto.includes(letrasClave[l]) & letrasClave.length>l){
             alfabeto[i] = letrasClave[l];
             i++;
+        } else if(!alfabeto.includes(letrasClave[l+1]) & letrasClave.length>l) {
+            alfabeto[i] = letrasClave[l+1];
+            i++;
+            l++;
         } else {
             if(!alfabeto.includes(letras[x])){
                 alfabeto[i] = letras[x];
@@ -33,6 +38,7 @@ const playfair = (opt,m, k, alpha) => {
         }
         l++;
     }
+    
     for (let j = 0; j < 5; j++) {
         matriz[j] = [];
         for (let y = 0; y < 5; y++) {
@@ -164,9 +170,12 @@ const playfair = (opt,m, k, alpha) => {
             if(!mensaje[index]) {
                 posicionesP = getIndexOfK(matriz,primeraLetra);
                 posicionesS = getIndexOfK(matriz,segundaLetra);
-                temp = posicionesP[1];
-                posicionesP[1] = posicionesS[1];
-                posicionesS[1] = temp;
+                // temp = posicionesP[1];
+                // posicionesP[1] = posicionesS[1];
+                // posicionesS[1] = temp;
+                temp = posicionesP[0];
+                posicionesP[0] = posicionesS[0];
+                posicionesS[0] = temp;
                 mensaje[index] = matriz[posicionesP[0]][posicionesP[1]] + matriz[posicionesS[0]][posicionesS[1]];
             }
         }
@@ -191,3 +200,9 @@ const alpha2 = 'ABCDEFGHIJLMNOPQRSTUVWXYZ';
 const m2 = "Las sombras llaman a la puerta del castillo hoy";
 const k2 = "MIEDO";
 // console.log(playfair(0,m2,k2,alpha2));
+
+const alpha3 = 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
+const m3 = 'EVOHKQNGOGNTCEFOOGOPPEOGO DZGOCEASHTQEGOFODHT NGRFEBQAJG EFBI EQFHRFEPXOAUPF ENRNRNPIGNPOCEDQPT ODZVBNNGFBGAQEOHKQN GTPSHAP ZFNRUIOGEFBIEQFHRFEPBOCEYOOYPQNGTPBEYM';
+const m4 = 'UN HACKER ES UNA PERSONA QUE ESTA SIEMPRE EN UNA CONTINUA BUSQUEDA DE INFORMACION VIVE PARA APRENDER Y TODO PARA EL ES UN RETONO EXISTEN BARRERAS Y LUCHA POR LA DIFUSION LIBRE DE INFORMACION DISTRIBUCION DE SOFTWARE SIN COSTO Y LA GLOBALIZACION DE LA COMUNICACION'
+const k3 = "ENERGIA";
+console.log(playfair(1,m3,k3,alpha3));
